@@ -14,24 +14,52 @@
                         </a>
                     </li>
                     {% endif %}
-                    {% if site.twitter_username %}
+                    {% if site.github_username %}
                     <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}">
+                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
                     {% endif %}
-
-                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    {% if site.mayun_username %}
+                    <li>
+                        <a target="_blank" href="https://gitee.com/{{ site.mayun_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">码</i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
                     {% if site.zhihu_username %}
                     <li>
                         <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.jianshu_username %}
+                            <li>
+                                <a target="_blank" href="https://www.jianshu.com/u/{{ site.jianshu_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
+                                    </span>
+                                </a>
+                            </li>
+                    {% endif %}
+                    {% if site.twitter_username %}
+                    <li>
+                        <a href="https://twitter.com/{{ site.twitter_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -46,24 +74,12 @@
                         </a>
                     </li>
                     {% endif %}
-
-
                     {% if site.facebook_username %}
                     <li>
                         <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.github_username %}
-                    <li>
-                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -82,11 +98,11 @@
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    Theme on <a href="{{ site.github_repo }}">GitHub</a> |
                     <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                        src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_username }}.github.io&type=star&count=true" >
                     </iframe>
                 </p>
             </div>
@@ -98,7 +114,6 @@
 <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
 <script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Custom Theme JavaScript -->
@@ -106,9 +121,17 @@
 
 <!-- Service Worker -->
 {% if site.service-worker %}
-<script src="{{ "/js/snackbar.js " | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/sw-registration.js " | prepend: site.baseurl }}"></script>
+<script type="text/javascript">
+    if(navigator.serviceWorker){
+        // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {console.log('Service Worker Registered. ', registration)})
+            .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
+    }
+</script>
 {% endif %}
+
 
 <!-- async load function -->
 <script>
@@ -122,15 +145,15 @@
     }
 </script>
 
-<!--
-     Because of the native support for backtick-style fenced code blocks
-     right within the Markdown is landed in Github Pages,
-     From V1.6, There is no need for Highlight.js,
-     so Huxblog drops it officially.
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Wwxblog drops it officially.
 
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
-     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/ 
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers   
 -->
 <!--
     <script>
@@ -168,7 +191,7 @@
 <!-- Google Analytics -->
 {% if site.ga_track_id %}
 <script>
-    // dynamic User by Hux
+    // dynamic User by Wwx
     var _gaId = '{{ site.ga_track_id }}';
     var _gaDomain = '{{ site.ga_domain }}';
 
@@ -187,7 +210,7 @@
 <!-- Baidu Tongji -->
 {% if site.ba_track_id %}
 <script>
-    // dynamic User by Hux
+    // dynamic User by Wwx
     var _baId = '{{ site.ba_track_id }}';
 
     // Originial
@@ -202,26 +225,13 @@
 {% endif %}
 
 
+
 <!-- Side Catalog -->
 {% if page.catalog %}
 <script type="text/javascript">
     function generateCatalog (selector) {
-
-        // interop with multilangual 
-        if ({{ page.multilingual }}) {
-            _containerSelector = 'div.post-container.active'
-        } else {
-            _containerSelector = 'div.post-container'
-        }
-
-        // init
-        var P = $(_containerSelector),a,n,t,l,i,c;
+        var P = $('div.post-container'),a,n,t,l,i,c;
         a = P.find('h1,h2,h3,h4,h5,h6');
-
-        // clean
-        $(selector).html('')
-
-        // appending
         a.each(function () {
             n = $(this).prop('tagName').toLowerCase();
             i = "#"+$(this).prop('id');
@@ -230,7 +240,7 @@
             l = $('<li class="'+n+'_nav"></li>').append(c);
             $(selector).append(l);
         });
-        return true;
+        return true;    
     }
 
     generateCatalog(".catalog-body");
@@ -243,7 +253,7 @@
 
     /*
      * Doc: https://github.com/davist11/jQuery-One-Page-Nav
-     * Fork by Hux to support padding
+     * Fork by Wwx to support padding
      */
     async("{{ '/js/jquery.nav.js' | prepend: site.baseurl }}", function () {
         $('.catalog-body').onePageNav({
@@ -272,12 +282,10 @@
     var $zh = document.querySelector(".zh");
     var $en = document.querySelector(".en");
     var $select = document.querySelector("select");
-
     // bind hashchange event
     // Changes at v1.7.2: change the language flag from hash-basing to in-memory basing
     // due to its confliction with catalog anchors.
     // window.addEventListener('hashchange', _render);
-
     // handle render
     function _render(_hash){
         var _hash = _hash || window.location.hash;
@@ -300,7 +308,6 @@
         // interop with catalog 
         if ("{{ page.catalog }}") generateCatalog(".catalog-body");
     }
-
     // handle select change
     function onLanChange(index){
         if(index == 0){
@@ -310,7 +317,6 @@
         }
         _render(_hash)
     }
-
     // init
     _render();
 </script>
