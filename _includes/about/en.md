@@ -11,9 +11,7 @@ Hey，我是吴文祥，一只懒惰的程序猿，努力朝 nodejs全栈 攻城
 - [GitHub][1]
 - [jekyll][2]
 - [Hux Blog][3]
-- [BY Blog][4]
 
 [1]: https://github.com
 [2]: http://jekyll.com.cn
 [3]: http://huangxuan.me
-[4]: http://qiubaiying.top/

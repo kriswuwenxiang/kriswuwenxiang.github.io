@@ -1,8 +1,8 @@
 # Site settings
-title: Wwx Blog                         #你博客的标题
-SEOTitle: 吴文祥的博客 | Wwx blog       #显示在浏览器上搜索的时候显示的标题
-header-img: images/home-bg.jpg             #显示在首页的背景图片
-email: wwx20ling@gmail.com
+title: "Wwx Blog"                       #你博客的标题
+SEOTitle: "吴文祥的博客 | Wwx blog"     #显示在浏览器上搜索的时候显示的标题
+header-img: "images/home-bg.jpg"        #显示在首页的背景图片
+email: "wwx20ling@gmail.com"
 description: "这里是 @Wwx吴文祥 的个人博客，与你一起探讨世界。"
 keyword: "吴文祥, Wwx吴文祥, Wwx, 吴文祥的博客, Wwx Blog, 博客, 个人网站, 互联网, Web前端, Node, 设计"
 url: "https://kriswuwenxiang.github.io" # 这个就是填写你的博客地址
@@ -14,7 +14,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # SNS settings 社交账号
 RSS: false
 github_username:    kriswuwenxiang
-mayun_username:    kriswuwenxiang
+mayun_username:     kriswuwenxiang
 zhihu_username:     kriswuwenxiang
 # weibo_username:     kriswuwenxiang
 # twitter_username:   wuwenxiang
@@ -70,8 +70,8 @@ ga_domain: auto                         # 默认的是 auto, 这里我是自定�
 
 # Sidebar settings
 sidebar: true                           # 是否开启侧边栏.
-sidebar-about-description: "新的开始，新的征程..."
-sidebar-avatar: /images/avatar-wwx.jpg     # 你的个人头像
+sidebar-about-description: "学无止尽..."
+sidebar-avatar: /images/avatar-boy.jpg  # 你的个人头像
 
 
 
