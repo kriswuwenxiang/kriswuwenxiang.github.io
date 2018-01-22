@@ -55,3 +55,11 @@ imageObj.onload=function(){// 图片加载触发的方法
 }
 imageObj.src=imgSrc;// 加载图片
 {% endhighlight %}
+
+### 效果图
+实际操作带有动画效果
+![](/images/post/2018-01-22/album.jpg)
+
+
+### 源码
+源代码地址 [https://github.com/kriswuwenxiang/mobileAlbum](https://github.com/kriswuwenxiang/mobileAlbum)
