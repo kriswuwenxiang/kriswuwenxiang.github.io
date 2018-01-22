@@ -12,7 +12,6 @@ tags:
 
 
 ## 引言
-
 这是一个利用zepto.js+animate.css+canvas简单的移动端手机相册。
 
 
