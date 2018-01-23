@@ -98,3 +98,8 @@ friends: [
     href: "https://gitee.com/explore/recommend"
   }
 ]
+
+
+
+# 所在地
+address_details: "http://m.amap.com/navi/?dest=118.182171,24.483892&destName=厦门软件园&hideRouteIcon=1&key=a5e5601d742ef05b5a9c8d30edcae8b8"
