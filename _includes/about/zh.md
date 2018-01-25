@@ -1,6 +1,6 @@
 > 求知若渴，谦卑若愚。
 
-Hey，我是吴文祥，一只懒惰的程序猿，努力朝 nodejs全栈 攻城狮进化，绝招正在开发中。
+Hey，我是吴文祥，一只懒惰的程序猿，朝 nodejs全栈 攻城狮进化中，绝招正在开发。
 
 这是我的利用 [GitHub Pages](https://pages.github.com) 与 [Jekyll](http://jekyll.com.cn) 搭建的个人博客。
 

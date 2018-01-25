@@ -15,8 +15,7 @@ tags:
 
 > **什么是事件？** 
 
-JavaScript 使我们有能力创建动态页面，事件是可以被 JavaScript 侦测到的行为。
-网页中的每个元素都可以产生某些可以触发 JavaScript 函数的事件。比方说，我们可以在用户点击某按钮时产生一个 onClick 事件来触发某个函数。[JavaScript 事件参考手册](http://www.w3school.com.cn/jsref/jsref_events.asp)
+JavaScript 使我们有能力创建动态页面，事件是可以被 JavaScript 侦测到的行为。网页中的每个元素都可以产生某些可以触发 JavaScript 函数的事件。比方说，我们可以在用户点击某按钮时产生一个 onClick 事件来触发某个函数。[JavaScript 事件参考手册](http://www.w3school.com.cn/jsref/jsref_events.asp)
 
 **注意**： 事件通常与函数配合使用，当事件发生时函数才会执行。
 
@@ -35,12 +34,10 @@ JavaScript 使我们有能力创建动态页面，事件是可以被 JavaScript 
 {% highlight html %}
 <html>
 <body>
-
-<input type="button" value="按钮" onclick="clickEvent()">
-<script>
-  function clickEvent() { alert("HTML事件处理程序"); }
-</script>
-
+  <input type="button" value="按钮" onclick="clickEvent()">
+  <script>
+    function clickEvent() { alert("HTML事件处理程序"); }
+  </script>
 </body>
 </html>
 {% endhighlight %}
@@ -51,13 +48,11 @@ JavaScript 使我们有能力创建动态页面，事件是可以被 JavaScript 
 {% highlight html %}
 <html>
 <body>
-
-<input type="button" value="按钮">
-<script>
-  var btn = document.querySelector("input");
-  btn.onclick = function() { alert("DOM0级事件处理程序"); }
-</script>
-
+  <input type="button" value="按钮">
+  <script>
+    var btn = document.querySelector("input");
+    btn.onclick = function() { alert("DOM0级事件处理程序"); }
+  </script>
 </body>
 </html>
 {% endhighlight %}
@@ -71,14 +66,12 @@ JavaScript 使我们有能力创建动态页面，事件是可以被 JavaScript 
 {% highlight html %}
 <html>
 <body>
-
-<input type="button" value="按钮">
-<script>
-  var btn = document.querySelector("input");
-  btn.addEventListener("click", clickEvent, false);
-  function clickEvent() { alert("DOM2级事件处理程序"); }
-</script>
-
+  <input type="button" value="按钮">
+  <script>
+    var btn = document.querySelector("input");
+    btn.addEventListener("click", clickEvent, false);
+    function clickEvent() { alert("DOM2级事件处理程序"); }
+  </script>
 </body>
 </html>
 {% endhighlight %}
