@@ -71,7 +71,7 @@ ga_domain: auto                         # 默认的是 auto, 这里我是自定�
 
 # Sidebar settings
 sidebar: true                           # 是否开启侧边栏.
-sidebar-about-description: "学无止尽..."
+sidebar-about-description: "学得越多，写的越多..."
 sidebar-avatar: /images/avatar-boy.jpg  # 你的个人头像
 
 
