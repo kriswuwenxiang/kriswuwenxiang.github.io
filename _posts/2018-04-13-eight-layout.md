@@ -385,7 +385,7 @@ Flex 是 `Flexible Box` 的缩写，意为"弹性布局"，用来为盒状模型
 </html>
 {% endhighlight %}
 **缺点**：
- - table 布局的性能比 flex 布局差一些。
+ - table 布局的三栏（单元格）高度都是一致的。
 
 
 ### 五、Grid布局解决方案
